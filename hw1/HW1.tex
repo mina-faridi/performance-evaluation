@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\usepackage{amsthm,amsmath,amssymb}
+
+\title{First document}A
+\author{Hubert Farnsworth \thanks{funded by the Overleaf team}}
+\date{February 2017}
+\begin{document}
+\maketitle
+
+
+	\nonumber \\
+	Question 1
+	\begin{align}
+		p(A) & = 0.2 \nonumber \\
+		p(B) & = 0.5 \nonumber \\
+		p(A \cup B) & = 0.4  \nonumber \\
+		p(A \cap B) & = p(A) + p(B) - P(A \cap B) = 0  \nonumber \\
+		p(A \vert B) & = \frac{p(A \cap B)}{ p(B)}=0  \nonumber \\
+	\end{align} 
+	
+
+	Question 2: not independent
+	\begin{align}
+		p(A) & = 0.3 \nonumber \\
+		p(B) & = 0.1 \nonumber \\
+		p(A \cup B) & = 1-0.35=0.65  \nonumber \\
+		p(A \cap B) & = 0.05 \nonumber\\ 
+		p(A)p(B) & =0.001 \nonumber\\ 
+	\end{align}
+
+	Question 3
+	\begin{align}
+		p(A \cup B) & = p  \nonumber \\
+		p(A \cup B) - p(A \cap B) & = q \nonumber\\ 
+		p(A^ \prime) + p(B^\prime) & =1 - p(A) + 1 - p(B)  \nonumber\\ 
+		& = 2 - (p(A)+p(B)) \nonumber\\
+		& = 2 - (p(A \cup B) +  p(A \cap B)) \nonumber\\
+		& = 2 - (p + p -q) \nonumber\\
+		& = 2 - (2p - q) \nonumber\\
+	\end{align}
+
+	Question 4
+	\begin{align}
+		p(A)p(B) & = p(A \cap B)\nonumber \\
+		p(A) & = 0.8 \nonumber \\
+		p(A \cup B) - p(A \cap B) & = 0.5 \nonumber\\ 
+		& = (p(A)+p(B)) - 2p(A \cap B)\nonumber\\
+		& = 0.8 + p(B) - 2\times 0.8p(B) \nonumber\\
+		0.6p(B) & = 0.3 \nonumber \\
+		p(B) & = 0.5 \nonumber \\
+	\end{align}
+
+	Question 5
+	\begin{align}
+		p(A) & = 0.4 \nonumber \\
+		p(B) & = 0.3 \nonumber \\
+		p(C) & = 0.3 \nonumber \\
+		p(d \vert A) & = 0.04  \nonumber \\
+		p(d \vert B) & = 0.04  \nonumber \\
+		p(d \vert C) & = 0.05  \nonumber \\
+		p(d) & = 0.4\times0.04 + 0.3 \times 0.04 + 0.3 \times 0.05  \nonumber \\
+		& = 0.045\nonumber\\
+		p(A \vert d) & =\frac{p(d \vert A)p(A)}{ p(d)}  \nonumber \\
+		& = \frac{0.04\times 0.4}{0.045}  \nonumber \\
+		& = 0.0355  \nonumber \\
+	\end{align}
+
+	Question 6
+	\begin{align}
+		p(accept) & = \frac{{4 \choose 95}}{{4 \choose 100}} \nonumber \\
+		& = \frac{95\times94\times 93\times 92}{100\times99\times 98\times 97}  \nonumber \\
+		& = 0.81  \nonumber \\
+	\end{align}
+
+
+\end{document}
