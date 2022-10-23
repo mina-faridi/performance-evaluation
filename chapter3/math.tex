@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage{amsthm,amsmath,amssymb}
+
+\begin{document}
+		
+	\section*{3.1}
+		$$
+		\begin{gathered}
+		p_{Y}(1)=P(X \leq \frac{1}{3})=\frac{1}{3} \\
+		p_{Y}(2)=1-p_{Y}(1)=\frac{2}{3} \\
+		E[Y]=\frac{1}{3} \times 1+\frac{2}{3} \times 2=\frac{5}{3} \\
+		E[Y]=\int_{0}^{1} g(x) f_{X}(x) d x=\int_{0}^{\frac{1}{3}} d x+\int_{\frac{1}{3}}^{1} 2 d x=\frac{5}{3}
+		\end{gathered}
+		$$
+	\section*{3.5}
+		$$
+		\begin{gathered}
+		F_{X}(x)=1-P(X>x)=1-\frac{A_{x}}{A}=1-\frac{b(h-x)^{2} /(2 h)}{b h / 2}=1-\left(\frac{h-x}{h}\right)^{2}, \\
+		f_{X}(x)=\frac{d F_{X}}{d x}(x)= \begin{cases}\frac{2(h-x)}{h^{2}}, & \text { if } 0 \leq x \leq h, \\
+		0, & \text { otherwise. }\end{cases}
+		\end{gathered}
+		$$
+
+	
+	\section*{3.13}
+	
+		$$
+		\begin{gathered}
+		P(Y \leq 59)=P(X \leq 15)=P\left(Z \leq \frac{15-E[X]}{\sigma_{X}}\right)=P(Z \leq 0.5)=\Phi(0.5) \\
+		\Phi(0.5)=0.6915 \\
+		P(Y \leq 59)=0.6915
+		\end{gathered}
+		$$
+
+	\section*{2.21}
+		\begin{equation}
+		f_{X \mid Y}(x \mid y)=1 / y, \text { for } 0 \leq x \leq y
+		\end{equation}
+
+		$$
+		\begin{gathered}
+		f_{X, Y}(x, y)=f_{Y}(y) f_{X \mid Y}(x \mid y)= \begin{cases}\frac{1}{l} \times \frac{1}{y}, & 0 \leq x \leq y \leq l \\
+		0, & \text { otherwise. }\end{cases} \\
+		f_{X}(x)=\int f_{X, Y}(x, y) d y=\int_{x}^{l} \frac{1}{l y} d y=\frac{1}{l} \ln (l / x), \quad 0 \leq x \leq l . \\
+		E[X]=\int_{0}^{l} x f_{X}(x) d x=\int_{0}^{l} \frac{x}{l} \ln (l / x) d x=\frac{l}{4}
+		\end{gathered}
+		$$
+		$$
+		\begin{gathered}
+		E[Y]=l / 2 \\
+		E[X / Y]=1 / 2 \\
+		E[X]=E[Y] E\left[\frac{X}{Y}\right]=\frac{l}{2} \cdot \frac{1}{2}=\frac{l}{4}
+		\end{gathered}
+		$$
+
+			
+		
+	\section*{2.25}
+	
+		$A$ : $X^{2}+Y^{2} \geq c^{2}$.
+		$$
+		\begin{aligned}
+		P(A) &=\frac{1}{2 \pi \sigma^{2}} \int_{0}^{2 \pi} \int_{a}^{\infty} r e^{-r^{2} / 2 \sigma^{2}} d r d \theta \\
+		&=\frac{1}{\sigma^{2}} \int_{a}^{\infty} r e^{-r^{2} / 2 \sigma^{2}} d r \\
+		&=e^{-a^{2} / 2 \sigma^{2}}
+		\end{aligned}
+		$$
+		$$
+		f_{X, Y \mid A}(x, y)=\frac{f_{X, Y}(x, y)}{P(A)}=\frac{1}{2 \pi \sigma^{2}} e^{-\frac{1}{2 \sigma^{2}}\left(x^{2}+y^{2}-c^{2}\right)}
+		$$
+
+
+
+\end{document}
