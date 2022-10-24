@@ -1,0 +1,151 @@
+\documentclass{article}
+
+\usepackage{amsthm,amsmath,amssymb}
+
+\begin{document}
+		
+	\section*{4.1}
+		$$
+		\begin{gathered}
+		Y=\sqrt{|X|} \quad \text { for } 0 \leq y \leq 1 \\
+		F_{Y}(y)=P(Y \leq y)=P\left(-y^{2} \leq X \leq y^{2}\right)=y^{2}, \\
+		f_{Y}(y)=2 y  \\
+		Y=-\ln |X| \quad \text  y \geq 0\\
+		F_{Y}(y)=P(Y \leq y)=P\left(X \geq e^{-y}\right)+P\left(X \leq-e^{-y}\right)=1-e^{-y}, \\
+		f_{Y}(y)=e^{-y} ,
+		\end{gathered}
+		$$
+
+	\section*{4.5}
+		$$
+		\begin{gathered}
+		A=|X-Y| \\
+		F_{A}(a)=P(|X-Y| \leq a)=1-(1-a)^{2} . \\
+		f_{A}(a)= \begin{cases}2(1-z) & \text { if } 0 \leq z \leq 1 \\
+		0 & \text { else }\end{cases}
+		\end{gathered}
+		$$
+
+
+	
+	\section*{4.9}
+		$$
+		Z=X-Y
+		$$
+		for $z \geq 0$
+		$$
+		\begin{aligned}
+		F_{Z}(z) &=P(X-Y \leq z) \\
+		&=1-P(X-Y>z) \\
+		&=1-\int_{0}^{\infty} \mu e^{-\mu y}\left(\int_{z+y}^{\infty} \lambda e^{-\lambda x} d x\right) d y \\
+		&=1-e^{-\lambda z} \int_{0}^{\infty} \mu e^{-(\lambda+\mu) y} d y \\
+		&=1-\frac{\mu}{\lambda+\mu} e^{-\lambda z}
+		\end{aligned}
+		$$
+		
+		for $z<0$
+		$$
+		F_{Z}(z)=1-F_{Z}(-z)=1-\left(1-\frac{\lambda}{\lambda+\mu} e^{-\mu(-z)}\right)=\frac{\lambda}{\lambda+\mu} e^{\mu z}
+		$$
+		so
+		$$
+		F_{Z}(z)= \begin{cases}1-\frac{\mu}{\lambda+\mu} e^{-\lambda z}& z \geq 0 \\ \frac{\lambda}{\lambda+\mu} e^{\mu z} &z<0\end{cases}
+		$$
+		PDF is:
+		$$
+		f_{Z}(z)= \begin{cases}\frac{\lambda \mu}{\lambda+\mu} e^{-\lambda z} & z \geq 0 \\ \frac{\lambda \mu}{\lambda+\mu} e^{\mu z} & z<0\end{cases}
+		$$
+
+
+
+
+	\section*{4.13}
+		$$
+		\begin{gathered}
+		X-Y=X+Z-(a+b) \\
+		Z=a+b-Y
+		\end{gathered}
+		$$
+		the PDF of $X+Z$ equals PDF of $X+Y$\\
+		the PDF of $X-Y$ : shift the PDF of $X+Y$ to the left by $a+b$.
+		
+
+			
+		
+	\section*{4.17}
+			
+		when a constant is added to x or y covariance is constant so their mean is 0.
+		$$
+		\operatorname{cov}(X-Y, X+Y)=E[(X-Y)(X+Y)]=E\left[X^{2}\right]-E\left[Y^{2}\right]=\operatorname{var}(X)-\operatorname{var}(Y)=0
+		$$
+
+	\section*{4.29}
+	
+		$$
+		\begin{gathered}
+		M(s)=E\left[e^{s X}\right]=\frac{1}{2} e^{s}+\frac{1}{4} e^{2 s}+\frac{1}{4} e^{3 s} \\
+		E[X]=\left.\frac{d}{d s} M(s)\right|_{s=0}=\frac{1}{2}+\frac{2}{4}+\frac{3}{4}=\frac{7}{4} \\
+		E\left[X^{2}\right]=\left.\frac{d^{2}}{d s^{2}} M(s)\right|_{s=0}=\frac{1}{2}+\frac{4}{4}+\frac{9}{4}=\frac{15}{4} \\
+		E\left[X^{3}\right]=\left.\frac{d^{3}}{d s^{3}} M(s)\right|_{s=0}=\frac{1}{2}+\frac{8}{4}+\frac{27}{4}=\frac{37}{4}
+		\end{gathered}
+		$$
+
+
+	\section*{4.33}
+	
+
+		$f_{X}(x)= \begin{cases}\frac{1}{3} \cdot 2 e^{-2 x}+\frac{2}{3} \cdot 3 e^{-3 x} &  x \geq 0 \\ 0 & \text { else }\end{cases}$
+
+
+	\section*{4.37}
+	
+		
+		$X$ : number of types of ordered pizza \\
+		$X_{i}$ : 
+		$X_{i}= \begin{cases}1 & \text { a type } i \text { pizza ordered at least once } \\ 0 & \text { else. }\end{cases}$\\
+		$X=X_{1}+\cdots+X_{n}$
+		$$
+		E[X]=E[E[X \mid K]]=E\left[E\left[X_{1}+\cdots+X_{n} \mid K\right]\right]=n E\left[E\left[X_{1} \mid K\right]\right]
+		$$
+		p(if a customer does'ntordertype 1) : $(n-1) / n$
+		$$
+		E\left[X_{1} \mid K=k\right]=1-\left(\frac{n-1}{n}\right)^{k}
+		$$
+		$$
+		E\left[X_{1} \mid K\right]=1-\left(\frac{n-1}{n}\right)^{K}
+		$$
+		
+		$$
+		p=\frac{n-1}{n}
+		$$
+		$$
+		E[X]=n E\left[1-p^{K}\right]=n-n E\left[p^{K}\right]=n-n E\left[e^{K \log p}\right]=n-n M_{K}(\log p)
+		$$
+
+
+	\section*{4.41}
+		(a) $E$ : number of people \\
+		$M_{E}(s)=e^{\lambda\left(e^{s}-1\right)}$
+		$X_{i}$ uniformly distributed so
+		$$
+		M_{X}(s)=\frac{e^{s}-1}{s} .
+		$$
+		
+		$$
+		M_{Y}(s)=e^{\lambda\left(M_{X}(s)-1\right)}=e^{\lambda\left(\frac{e^{s}-1}{s}-1\right)}
+		$$
+		(b) with chain rule
+		$$
+		E[Y]\\
+=\left.\frac{d}{d s} M_{Y}(s)\right|_{s=0}\\
+=\left.\left.\frac{d}{d s} M_{X}(s)\right|_{s=0} \cdot \lambda e^{\lambda\left(M_{X}(s)-1\right)}\right|_{s=0}=\frac{1}{2} \cdot \lambda=\frac{\lambda}{2}
+		$$
+		(c) with iterated expectations law
+		$$
+		E[Y]=E[E[Y \mid N]]=E[N E[X]]=E[N] E[X]=\frac{\lambda}{2}
+		$$
+
+
+
+
+\end{document}
